@@ -327,25 +327,23 @@
       </div> -->
       <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
+      <!-- Architecture. -->
+      <div class="column">
+        <h2 class="title is-3">Architecture</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              <span class="dnerf">ForceSight</span> Transformer-based Architecture, with multi-headed output.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+            <img src="./static/images/Architecture.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
           </div>
 
         </div>
       </div>
-    </div> -->
-    <!--/ Matting. -->
+    </div>
+    <!--/ Architecture. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
@@ -386,8 +384,8 @@
         <br/> -->
         <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Pick up the cup Task</h3>
+        <!-- Pick cup -->
+        <h3 class="title is-4">"Pick up the cup" Task</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
@@ -405,7 +403,47 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
+        <!--/ Pick cup -->
+
+        <!-- Open drawer -->
+        <h3 class="title is-4">"Open the drawer" Task</h3>
+        <div class="content has-text-justified">
+          <p>
+            Open a drawer task using <span class="dnerf">ForceSight</span>. Video is sped up 4x.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/open-drawerx4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Open drawer -->
+
+        <!-- Pick up paperclip -->
+        <h3 class="title is-4">"Pick up the paperclip" Task</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
+            picking up paperclip action sequences.
+          </p>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="75%">
+              <source src="./static/videos/paperclipx4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <!--/ paperclip -->            
 
       </div>
     </div>
