@@ -92,7 +92,7 @@
           <div class="is-size-5 publication-authors">
 
             <span class="author-block">
-              <a>Anonymous (In Double-blind review process)</a><sup></sup></span>
+              <a>Anonymous (Under double-blind review)</a><sup></sup></span>
             <!-- <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -131,7 +131,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="./static/paper/ForcePlanningCoRL2023.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -139,7 +139,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -185,7 +185,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ForceSight</span> Pick up an apple with ForceSight future 3D contact and force visual-goals.
+        <span class="dnerf">ForceSight</span> proposes visual-force goals for mobile manipulation, enabling tasks like grasping an apple.
       </h2>
     </div>
   </div>
@@ -258,10 +258,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. 
-            Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. 
-            We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.
-            We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
+            Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -332,12 +329,12 @@
         <h2 class="title is-3">Architecture</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              <span class="dnerf">ForceSight</span> Transformer-based Architecture, with multi-headed output.
-            </p>
             <img src="./static/images/Architecture.png"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
+            class="interpolation-image"
+            alt="Interpolation end reference image."/>
+            <p>
+              <span class="dnerf">ForceSight</span> is a text-conditioned RGBD vision transformer. An RGBD image is first divided into patches and passed into an RGBD-adapted patch encoder that transforms image patches into visual tokens. These visual tokens are then taken as input into a vision transformer. After every transformer block inside the vision transformer, the visual features are conditioned on text embeddings from a frozen text encoder via cross-attention to produce conditioned patch features. These patch features are passed into two simple convolutional decoders to produce an affordance map and a depth map. The patch features are additionally average pooled and passed into several MLPs in order to predict the grasp width, wrist force, grip force, and yaw.
+            </p>
           </div>
 
         </div>
@@ -385,13 +382,13 @@
         <!--/ Interpolating. -->
 
         <!-- Pick cup -->
-        <h3 class="title is-4">"Pick up the cup" Task</h3>
-        <div class="content has-text-justified">
+        <h3 class="title is-4">"Pick up the cup"</h3>
+        <!-- <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
             picking up cup strategy.
           </p>
-        </div>
+        </div> -->
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
@@ -406,12 +403,12 @@
         <!--/ Pick cup -->
 
         <!-- Open drawer -->
-        <h3 class="title is-4">"Open the drawer" Task</h3>
-        <div class="content has-text-justified">
+        <h3 class="title is-4">"Open the drawer"</h3>
+        <!-- <div class="content has-text-justified">
           <p>
             Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
           </p>
-        </div>
+        </div> -->
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
@@ -426,12 +423,12 @@
         <!--/ Open drawer -->
 
         <!-- Pick up paperclip -->
-        <h3 class="title is-4">"Pick up the paperclip" Task</h3>
+        <h3 class="title is-4">"Pick up the paperclip"</h3>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
             picking up paperclip action sequences. (Video is sped up x 4)
-          </p>
+          </p> -->
           <div class="content has-text-centered">
             <video id="replay-video"
                    controls

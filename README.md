@@ -1,4 +1,4 @@
-# Force Sight
+# ForceSight
 
 This website is forked and modified from [Nerfies website](https://nerfies.github.io).
 
