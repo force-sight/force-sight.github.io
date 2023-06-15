@@ -42,47 +42,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="NULL_LINK">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <!-- <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a> -->
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -255,10 +214,11 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
           <p>
-            Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
+            <!-- Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals. -->
+            We present ForceSight, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of ForceSight with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -512,7 +472,7 @@
           </p>
           <p>
             This website is forked from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies's source code</a>.
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
