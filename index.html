@@ -32,7 +32,8 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="./static/images/forcesight_logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -116,7 +117,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon!)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -218,7 +219,7 @@
         <div class="content has-text-justified">
           <p>
             <!-- Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals. -->
-            We present ForceSight, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of ForceSight with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
+            We present <span class="dnerf">ForceSight</span>, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of <span class="dnerf">ForceSight</span> with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly representing net applied force and grip force, <span class="dnerf">ForceSight</span> predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -341,6 +342,27 @@
         <br/> -->
         <!--/ Interpolating. -->
 
+        <!-- Pick apple -->
+        <h3 class="title is-4">"Pick up the apple"</h3>
+        <!-- <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
+            picking up cup strategy.
+          </p>
+        </div> -->
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/apple_main.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Pick apple -->
+
         <!-- Pick cup -->
         <h3 class="title is-4">"Pick up the cup"</h3>
         <!-- <div class="content has-text-justified">
@@ -376,14 +398,15 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/open-drawerx4.mp4"
+            <!-- <source src="./static/videos/open-drawerx4.mp4" -->
+            <source src="./static/videos/drawer_cubicle.mp4"
                     type="video/mp4">
           </video>
         </div>
         <!--/ Open drawer -->
 
         <!-- Pick up paperclip -->
-        <h3 class="title is-4">"Pick up the paperclip"</h3>
+        <h3 class="title is-4">"Pick up the paperclip (4x speed)"</h3>
         <div class="content has-text-justified">
           <!-- <p>
             Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
@@ -400,7 +423,27 @@
                       type="video/mp4">
             </video>
           </div>
-          <!--/ paperclip -->            
+          <!--/ paperclip -->         
+          
+          <!-- trash -->
+        <h3 class="title is-4">"Place object in the trash"</h3>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
+            picking up paperclip action sequences. (Video is sped up x 4)
+          </p> -->
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="75%">
+              <source src="./static/videos/trash_cubicle.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <!--/ trash -->       
 
       </div>
     </div>
@@ -458,7 +501,7 @@
          href="./static/paper/ForcePlanningCoRL2023.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/force-sight" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
