@@ -286,8 +286,8 @@
         <h2 class="title is-3">Model Architecture</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <!-- <img src="./static/images/model-archi.gif" class="interpolation-image is-centered" alt="Interpolation end reference image."/> -->
-            <video autoplay="" loop="" muted="" src="./static/videos/high_level.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+            <img src="./static/images/model-archi.gif" class="interpolation-image is-centered" alt="Interpolation end reference image."/>
+            <!-- <video autoplay="" loop="" muted="" src="./static/videos/high_level.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video> -->
             <p>
               <span class="dnerf">ForceSight</span> is a text-conditioned RGBD vision transformer. An RGBD image is first divided into patches and passed into an RGBD-adapted patch encoder that transforms image patches into visual tokens. These visual tokens are then taken as input into a vision transformer. After every transformer block inside the vision transformer, the visual features are conditioned on text embeddings from a frozen text encoder via cross-attention to produce conditioned patch features. These patch features are passed into two simple convolutional decoders to produce an affordance map and a depth map. The patch features are additionally average pooled and passed into several MLPs in order to predict the grasp width, wrist force, grip force, and yaw.
             </p>
@@ -301,7 +301,8 @@
       <h2 class="title is-3">System Architecture</h2>
       <div class="columns is-centered">
         <div class="column content">
-          <img src="./static/images/sys-archi.gif"
+          <!-- <img src="./static/images/sys-archi.gif" -->
+          <video autoplay="" loop="" muted="" src="./static/videos/high_level.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
           class="interpolation-image"
           alt="Interpolation end reference image."/>
           <p>
