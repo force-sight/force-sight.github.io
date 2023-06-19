@@ -125,7 +125,7 @@
                   <span>Data</span>
                 </a> -->
             </div>
-            <div style="color: grey; font-style: italic; font-size: small;">Paper last revised: Jun 17 2023</div>
+            <div style="color: grey; font-style: italic; font-size: small;">Paper last revised: Jun 18 2023</div>
           </div>
         </div>
       </div>
@@ -213,6 +213,26 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
+          <!-- Summary -->
+        <!-- <h3 class="title is-4">"Open the drawer (4x speed)"</h3> -->
+        <!-- <div class="content has-text-justified">
+          <p>
+            Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
+          </p>
+        </div> -->
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="100%">
+            <!-- <source src="./static/videos/open-drawerx4.mp4" -->
+            <source src="./static/videos/forcesight_corl_2023.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Summary -->
           <p>
             <!-- Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals. -->
             We present <span class="dnerf">ForceSight</span>, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of <span class="dnerf">ForceSight</span> with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly representing net applied force and grip force, <span class="dnerf">ForceSight</span> predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
