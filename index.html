@@ -316,7 +316,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Demo Tasks</h2>
-
+        
         <!-- Interpolating. -->
         <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
@@ -329,18 +329,18 @@
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
             <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
+            class="interpolation-image"
                  alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+                 <p>Start Frame</p>
+                </div>
+                <div class="column interpolation-video-column">
+                  <div id="interpolation-image-wrapper">
+                    Loading...
             </div>
             <input class="slider is-fullwidth is-large is-info"
                    id="interpolation-slider"
                    step="1" min="0" max="100" value="0" type="range">
-          </div>
+                  </div>
           <div class="column is-3 has-text-centered">
             <img src="./static/images/interpolate_end.jpg"
                  class="interpolation-image"
@@ -350,6 +350,89 @@
         </div>
         <br/> -->
         <!--/ Interpolating. -->
+
+        <!-- Open drawer -->
+      <h3 class="title is-4">"Open the drawer (4x speed)"</h3>
+      <!-- <div class="content has-text-justified">
+        <p>
+          Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
+        </p>
+      </div> -->
+      <div class="content has-text-centered">
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="75%">
+          <!-- <source src="./static/videos/open-drawerx4.mp4" -->
+          <source src="./static/videos/drawer_cubiclex4.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <!--/ Open drawer -->
+
+      <!-- Light -->
+      <h3 class="title is-4">"Turn on the light (4x speed)"</h3>
+      <!-- <div class="content has-text-justified">
+        <p>
+          Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
+        </p>
+      </div> -->
+      <div class="content has-text-centered">
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="75%">
+          <!-- <source src="./static/videos/open-drawerx4.mp4" -->
+          <source src="./static/videos/light_atriumx4.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <!--/ Light -->
+
+      <!-- Handover -->
+      <h3 class="title is-4">"Place object in the hand (4x speed)"</h3>
+      <!-- <div class="content has-text-justified">
+        <p>
+          Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
+        </p>
+      </div> -->
+      <div class="content has-text-centered">
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="75%">
+          <!-- <source src="./static/videos/open-drawerx4.mp4" -->
+          <source src="./static/videos/handoverx4.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <!--/ Handover -->
+
+      <!-- paperclip -->
+      <h3 class="title is-4">"Pick up the paperclip (4x speed)"</h3>
+      <div class="content has-text-justified">
+        <!-- <p>
+          Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
+          picking up paperclip action sequences. (Video is sped up x 4)
+        </p> -->
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+            <source src="./static/videos/paperclipx4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ paperclip -->     
 
         <!-- Pick apple -->
         <h3 class="title is-4">"Pick up the apple (4x speed)"</h3>
@@ -361,16 +444,17 @@
         </div> -->
         <div class="content has-text-centered">
           <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/apple_mainx4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Pick apple -->
+          controls
+          muted
+          preload
+          playsinline
+          width="75%">
+          <source src="./static/videos/apple_mainx4.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+
+        <!--/ Pick cup -->
 
         <!-- Pick cup -->
         <h3 class="title is-4">"Pick up the cup (4x speed)"</h3>
@@ -392,48 +476,7 @@
           </video>
         </div>
         <!--/ Pick cup -->
-
-        <!-- Open drawer -->
-        <h3 class="title is-4">"Open the drawer (4x speed)"</h3>
-        <!-- <div class="content has-text-justified">
-          <p>
-            Open a drawer task using <span class="dnerf">ForceSight</span>. (Video is sped up x 4)
-          </p>
-        </div> -->
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <!-- <source src="./static/videos/open-drawerx4.mp4" -->
-            <source src="./static/videos/drawer_cubiclex4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Open drawer -->
-
-        <!-- Pick up paperclip -->
-        <h3 class="title is-4">"Pick up the paperclip (4x speed)"</h3>
-        <div class="content has-text-justified">
-          <!-- <p>
-            Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
-            picking up paperclip action sequences. (Video is sped up x 4)
-          </p> -->
-          <div class="content has-text-centered">
-            <video id="replay-video"
-                   controls
-                   muted
-                   preload
-                   playsinline
-                   width="75%">
-              <source src="./static/videos/paperclipx4.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <!--/ paperclip -->         
-          
+           
           <!-- trash -->
         <h3 class="title is-4">"Place object in the trash (4x speed)"</h3>
         <div class="content has-text-justified">
@@ -448,11 +491,32 @@
                    preload
                    playsinline
                    width="75%">
-              <source src="./static/videos/trash_cubiclex4.mp4"
+              <source src="./static/videos/trashx4.mp4"
                       type="video/mp4">
             </video>
           </div>
-          <!--/ trash -->       
+          <!--/ trash -->  
+          
+          
+          <!-- medicine -->
+        <h3 class="title is-4">"Pick up the medicine bottle (4x speed)"</h3>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Using <span class="dnerf">ForceSight</span> and a low-level controller to execute the learned
+            picking up paperclip action sequences. (Video is sped up x 4)
+          </p> -->
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="75%">
+              <source src="./static/videos/medicinex4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <!--/ medicine -->  
 
       </div>
     </div>
