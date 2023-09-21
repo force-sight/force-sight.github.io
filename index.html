@@ -511,7 +511,7 @@
 
       </div>
     </div>
-    <!--/ Continous vs Binary Force -->
+    <!--/ Dynamic Object Handover -->
 
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -519,15 +519,77 @@
         
         <h3 class="title is-4">"place object in the hand" (4x speed)</h3>
         <div class="content has-text-centered">
-          <video autoplay="" loop="" muted="" src="./static/videos/hand_tracking.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+          <video autoplay="" loop="" muted="" src="./static/videos/hand_tracking.mp4" class="interpolation-image is-centered"  alt="Dynamic object handover."></video>
         </div>
       </div>
     </div>
 
-    <!--/ Assigning action primitives with an LLM -->
-    <div class="column">
+   <!--/ Emergent Properties -->
+
+   <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">Emergent Properties</h2>
+      <h3 class="title is-4">Generalization</h3>
+      <div class="content has-text-centered">
+        <img src="./static/images/train_test.png" class="interpolation-image is-centered" alt="Left:train, right:test"/>
+        <p>
+          <span class="dnerf">ForceSight</span> is able to generalize to novel environments and unseen object instances. <br>
+          <b>Left:</b> Objects in the training set. <b>Right:</b> objects in the test.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+   <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h3 class="title is-4">Agent Agnostic</h3>
+      
+      <div class="content has-text-centered">
+        <img src="./static/images/agent_agnostic.png" class="interpolation-image is-centered" alt="ForceSight is agent-agnostic"/>
+        <p>
+          Predictions from <span class="dnerf">ForceSight</span> are agnostic to the agent and camera perspective, as shown in this example for the apple grasping task.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h3 class="title is-4">Multi-step prediction</h3>
+      
+      <div class="content has-text-centered">
+        <img src="./static/images/multistep_prediction.png" class="interpolation-image is-centered" alt="Multistep prediction" style="width: 75%;"/>
+        <p>
+        <span class="dnerf">ForceSight</span> is able to make reasonable predictions for action primitives that are more than one keyframe into the future, despite having been trained to predict goals associated with only the next keyframe.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--/ Assigning action primitives with an LLM -->
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
       <h2 class="title is-3">Assigning action primitives with an LLM</h2>
-      <div class="columns is-centered">
+      
+      <div class="content has-text-centered">
+        <!-- <video autoplay="" loop="" muted="" src="./static/videos/hand_tracking.mp4" class="interpolation-image is-centered"  alt="Dynamic object handover."></video> -->
+        <img src="./static/images/gpt4_output.png" class="interpolation-image is-centered" alt="GPT-4 output"/>
+        <p>
+          We demonstrate how a large language model (GPT-4) could plausibly be used to assign action primitives to task descriptions.
+        </p>
+      </div>
+    </div>
+  </div>
+   
+    <!-- / Assigning action primitives with an LLM -->
+    <!-- <div class="column">
+      <h2 class="title is-3">Assigning action primitives with an LLM</h2>
+      <div class="columns is-full-width">
         <div class="column content">
           <img src="./static/images/gpt4_output.png" class="interpolation-image is-centered" alt="GPT-4 output"/>
           <p>
@@ -535,7 +597,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Concurrent Work. -->
     <!-- <div class="columns is-centered">
