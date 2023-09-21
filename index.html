@@ -6,7 +6,7 @@
         content="Multi-Task Text-Guided Mobile Manipulation with Visual-Force Goals">
   <meta name="keywords" content="Force, Imitation Learning, Robotics, Transformers">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ForceSight: Multi-Task Text-Guided Mobile Manipulation with Visual-Force Goals</title>
+  <title>ForceSight: Text-Guided Mobile Manipulation with Visual-Force Goals</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -43,7 +43,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ForceSight: Multi-Task Text-Guided Mobile Manipulation with Visual-Force Goals</h1>
+          <h1 class="title is-1 publication-title">ForceSight: Text-Guided Mobile Manipulation with Visual-Force Goals</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://jeremy-collins.github.io/">Jeremy A. Collins</a><sup>*</sup><sup>1</sup>,
@@ -73,6 +73,16 @@
                     <i class="fas fa-file-pdf"></i>
                 </span>
                 <span>Paper</span>
+              </a>
+            </span>
+            <!-- Appendix Link. -->
+            <span class="link-block">
+              <a href="./static/paper/ForceSight.pdf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Appendix (coming soon!)</span>
               </a>
             </span>
             <!-- <span class="link-block">
@@ -111,7 +121,7 @@
                 <span class="icon">
                     <i class="fas fa-database"></i>
                 </span>
-                <span>Dataset (Coming soon)</span>
+                <span>Dataset (coming soon!)</span>
               </a>
           </div>
           <div style="color: grey; font-style: italic; font-size: small;">Paper last revised: Sept 15 2023</div>
@@ -121,7 +131,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -133,8 +143,19 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
+<!-- replacing the above video with an image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Headliner.png" class="interpolation-image is-centered" alt="ForceSight teaser"/>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">ForceSight</span> is an RGBD-adapted, text-conditioned vision transformer. Given an RGBD image and a text prompt, ForceSight produces visual-force
+        goals for a mobile manipulator. Action primitives, shown below each image, are appended to the text input by a simple low-level controller.
+      </h2>
+    </div>
+  </div>
 
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
@@ -223,7 +244,7 @@
         <!--/ Summary -->
           <p>
             <!-- Prior work has demonstrated that deep models that output kinematic keyframes enable manipulation by real robots with human-interpretable motion goals. Contact forces are critical to manipulation, yet have typically been relegated to lower-level execution during keyframe-driven manipulation. We present ForceSight, a system for multi-task, text-guided mobile manipulation with a deep model that outputs visual and force goals (visual-force keyframes) suitable for visual-force servoing. Given a single RGBD image and a text prompt as input, ForceSight's deep model outputs a visual-force goal, which can be inferred at a high enough rate to work with a moving camera. We evaluate ForceSight using an eye-in-hand RGBD camera on a mobile manipulator.  We show that by explicitly representing net applied force and grip force, ForceSight predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals. -->
-            We present <span class="dnerf">ForceSight</span>, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of <span class="dnerf">ForceSight</span> with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly representing net applied force and grip force, <span class="dnerf">ForceSight</span> predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
+            We present <span class="dnerf">ForceSight</span>, a transformer-based robotic planner that generates force-based objectives given a text input and an RGBD image, empowering mobile manipulators to plan and execute contact-rich tasks. We demonstrate the utility of <span class="dnerf">ForceSight</span> with 10 mobile manipulation tasks using an eye-in-hand RGBD camera on a mobile manipulator, successfully generalizing to novel environments and unseen object instances. We show that by explicitly predicting force goals, <span class="dnerf">ForceSight</span> predicts forces suitable to the task, operates more effectively, and provides human-interpretable force goals.
           </p>
           <!-- <p>
             Our approach augments neural radiance fields
@@ -271,6 +292,96 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+      <!-- Tasks -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h2 class="title is-3">Task Samples</h2> -->
+            
+          <h3 class="title is-4">"Pick up the paperclip" (4x speed)</h3>
+          <div class="content has-text-centered">
+            <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_paperclip.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+          </div>
+          
+          <h3 class="title is-4">"Pick up the apple" (4x speed)</h3>
+          <div class="content has-text-centered">
+            <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_apple.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+          </div>
+          
+          <h3 class="title is-4">"Open the drawer" (4x speed)</h3>
+          <div class="content has-text-centered">
+            <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_drawer.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+          </div>
+  
+          <!-- <h3 class="title is-4">"Turn on the light (4x speed)"</h3>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+              <source src="./static/videos/light_atriumx4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+  
+          <h3 class="title is-4">"Place object in the hand (4x speed)"</h3>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+              <source src="./static/videos/handoverx4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+  
+          <h3 class="title is-4">"Pick up the cup (4x speed)"</h3>
+          <div class="content has-text-centered">
+              <video id="replay-video"
+                    controls
+                    muted
+                    preload
+                    playsinline
+                    width="75%">
+                <source src="./static/videos/pick-cupx4.mp4"
+                        type="video/mp4">
+              </video>
+          </div>
+  
+          <h3 class="title is-4">"Place object in the trash (4x speed)"</h3>
+          <div class="content has-text-centered">
+                <video id="replay-video"
+                      controls
+                      muted
+                      preload
+                      playsinline
+                      width="75%">
+                  <source src="./static/videos/trashx4.mp4"
+                          type="video/mp4">
+                </video>
+          </div>
+              
+              
+          <h3 class="title is-4">"Pick up the medicine bottle (4x speed)"</h3>
+          <div class="content has-text-centered">
+                <video id="replay-video"
+                      controls
+                      muted
+                      preload
+                      playsinline
+                      width="75%">
+                  <source src="./static/videos/medicinex4.mp4"
+                          type="video/mp4">
+                </video>
+          </div>  -->
+  
+        </div>
+      </div>
+      <!--/ Tasks -->
+
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
@@ -294,7 +405,7 @@
         <h2 class="title is-3">Model Architecture</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <img src="./static/images/Architecture.png" class="interpolation-image is-centered" alt="Interpolation end reference image."/>
+            <img src="./static/images/Architecture.png" class="interpolation-image is-centered" alt="ForceSight architecture"/>
             <!-- <video autoplay="" loop="" muted="" src="./static/videos/architecture.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video> -->
             <p>
               <span class="dnerf">ForceSight</span> is a text-conditioned RGBD vision transformer. An RGBD image is first divided into patches and passed into an RGBD-adapted patch encoder that transforms image patches into visual tokens. These visual tokens are then taken as input into a vision transformer. After every transformer block inside the vision transformer, the visual features are conditioned on text embeddings from a frozen text encoder via cross-attention to produce conditioned patch features. These patch features are passed into two simple convolutional decoders to produce an affordance map and a depth map. The patch features are additionally average pooled and passed into several MLPs in order to predict the grasp width, wrist force, grip force, and yaw.
@@ -320,135 +431,10 @@
 
     <br>
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Task Samples</h2>
-        
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-            class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-                 <p>Start Frame</p>
-                </div>
-                <div class="column interpolation-video-column">
-                  <div id="interpolation-image-wrapper">
-                    Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-                  </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <h3 class="title is-4">"Pick up the paperclip" (4x speed)</h3>
-        <div class="content has-text-centered">
-          <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_paperclip.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
-        </div>
-        
-        <h3 class="title is-4">"Pick up the apple" (4x speed)</h3>
-        <div class="content has-text-centered">
-          <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_apple.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
-        </div>
-        
-        <h3 class="title is-4">"Open the drawer" (4x speed)</h3>
-        <div class="content has-text-centered">
-          <video autoplay="" loop="" muted="" src="./static/videos/1x3_videos_drawer.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
-        </div>
-
-        <!-- <h3 class="title is-4">"Turn on the light (4x speed)"</h3>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/light_atriumx4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <h3 class="title is-4">"Place object in the hand (4x speed)"</h3>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/handoverx4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <h3 class="title is-4">"Pick up the cup (4x speed)"</h3>
-        <div class="content has-text-centered">
-            <video id="replay-video"
-                  controls
-                  muted
-                  preload
-                  playsinline
-                  width="75%">
-              <source src="./static/videos/pick-cupx4.mp4"
-                      type="video/mp4">
-            </video>
-        </div>
-
-        <h3 class="title is-4">"Place object in the trash (4x speed)"</h3>
-        <div class="content has-text-centered">
-              <video id="replay-video"
-                    controls
-                    muted
-                    preload
-                    playsinline
-                    width="75%">
-                <source src="./static/videos/trashx4.mp4"
-                        type="video/mp4">
-              </video>
-        </div>
-            
-            
-        <h3 class="title is-4">"Pick up the medicine bottle (4x speed)"</h3>
-        <div class="content has-text-centered">
-              <video id="replay-video"
-                    controls
-                    muted
-                    preload
-                    playsinline
-                    width="75%">
-                <source src="./static/videos/medicinex4.mp4"
-                        type="video/mp4">
-              </video>
-        </div>  -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
     <!-- Force vs No Force -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">With Force Goals (Left) vs Without Force Goals (Right)</h2>
+        <h2 class="title is-3"> Visual-Force Goals (Left) vs Kinematic Goals w/o Force (Right)</h2>
         
         <h3 class="title is-4">"pick up the keys" (4x speed)</h3>
         <div class="content has-text-centered">
@@ -534,6 +520,19 @@
         <h3 class="title is-4">"place object in the hand" (4x speed)</h3>
         <div class="content has-text-centered">
           <video autoplay="" loop="" muted="" src="./static/videos/hand_tracking.mp4" class="interpolation-image is-centered"  alt="Interpolation end reference image."></video>
+        </div>
+      </div>
+    </div>
+
+    <!--/ Assigning action primitives with an LLM -->
+    <div class="column">
+      <h2 class="title is-3">Assigning action primitives with an LLM</h2>
+      <div class="columns is-centered">
+        <div class="column content">
+          <img src="./static/images/gpt4_output.png" class="interpolation-image is-centered" alt="GPT-4 output"/>
+          <p>
+            We demonstrate how a large language model (GPT-4) could plausibly be used to assign action primitives to task descriptions.
+          </p>
         </div>
       </div>
     </div>
